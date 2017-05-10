@@ -1,0 +1,16 @@
+el-get/
+elpa/
+undohist/
+auto-save-list/
+ac-comphist.dat
+.cask/*
+*~
+*.swp
+.DS_Store
+.python-environments/
+recentf
+places
+history
+v/
+#*
+.#*
