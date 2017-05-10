@@ -138,5 +138,7 @@
 (setq howm-menu-lang 'ja)
 (require 'howm-mode)
 
-(global-set-key "C-c,," 'howm-menu)
+(setq howm-file-name-format "%Y/%m/%Y_%m_%d.txt")
+
+(global-set-key "\C-c,," 'howm-menu)
 (autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
