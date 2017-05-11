@@ -22,8 +22,6 @@
 (with-eval-after-load 'flycheck
   (flycheck-pos-tip-mode))
 
-(load-theme 'tango)
-
 ;; elscreen
 ;; プレフィクスキーはC-z
 (setq elscreen-prefix-key (kbd "C-q"))
