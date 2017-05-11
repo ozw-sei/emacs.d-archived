@@ -140,3 +140,50 @@
 
 (global-set-key "\C-c,," 'howm-menu)
 (autoload 'howm-menu "howm-mode" "Hitori Otegaru Wiki Modoki" t)
+
+
+;; reduce the frequency of garbage collection by making it happen on
+;; each 50MB of allocated data (the default is on every 0.76MB)
+(setq gc-cons-threshold 50000000)
+
+
+;; warn when opening files bigger than 100MB
+(setq large-file-warning-threshold 100000000)
+
+
+;; enable y/n answers
+(fset 'yes-or-no-p 'y-or-n-p)
+
+
+;; Newline at end of file
+(setq require-final-newline t)
+
+
+;; delete the selection with a keypress
+(delete-selection-mode t)
+
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
+
+;; misc useful keybindings
+(global-set-key (kbd "s-<") #'beginning-of-buffer)
+(global-set-key (kbd "s->") #'end-of-buffer)
+
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-verbose t)
+
+
+(use-package magit
+  :ensure t
+:bind (("C-x g" . magit-status)))
+
+
+
