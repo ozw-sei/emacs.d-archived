@@ -2,9 +2,10 @@
 (source melpa)
 (source org)
 
-
+(depends-on "init-loader")
 (depends-on "bind-key")
 (depends-on "cask")
+(depends-on "jedi-core")
 (depends-on "dash")
 (depends-on "helm")
 (depends-on "drag-stuff")
@@ -13,9 +14,11 @@
 (depends-on "f")
 (depends-on "flycheck")
 (depends-on "flycheck-cask")
+(depends-on "yasnippet")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
 (depends-on "magit")
+(depends-on "tide")
 (depends-on "multiple-cursors")
 (depends-on "popwin")
 (depends-on "s")
