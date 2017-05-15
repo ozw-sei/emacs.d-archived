@@ -1,7 +1,5 @@
 (require 'helm)
 
-(helm-migemo-mode 1)
-
 (global-set-key (kbd "C-x C-f") 'helm-for-files)
 
 (global-set-key (kbd "M-z") 'zop-up-to-char)
