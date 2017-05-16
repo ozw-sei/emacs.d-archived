@@ -184,7 +184,7 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 160)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -200,13 +200,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-(if (eq system-type 'darwim)
-                                        ;
-                                        ;
-    )
-
-(if (eq system-type 'gnu/linux)
-                                        ;
-    )
-
+(exec-path-from-shell-initialize)
 
