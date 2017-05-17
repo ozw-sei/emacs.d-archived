@@ -2,6 +2,7 @@
 (source melpa)
 (source org)
 
+(depends-on "skk")
 (depends-on "init-loader")
 (depends-on "bind-key")
 (depends-on "cask")
