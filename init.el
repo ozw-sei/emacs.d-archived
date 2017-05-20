@@ -217,5 +217,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
 (load-theme 'solarized t)
 
-(set-face-attribute 'default nil :family "Ritcty" :height 180)
+(set-face-attribute 'default nil :family "Ritcty" :height 140)
 
+;; Japanese font
+(set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAExGothic"))
