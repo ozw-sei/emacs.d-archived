@@ -192,7 +192,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ddskk zop-to-char web-mode use-package undohist undo-tree tide solarized-theme smartparens rust-mode recentf-ext quickrun popwin point-undo open-junk-file ng2-mode multiple-cursors magit js2-mode jedi-core init-loader idle-highlight-mode htmlize howm helm-ls-git helm-ghq helm-ag git-gutter-fringe+ flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell ensime elscreen elpy drag-stuff dockerfile-mode disable-mouse dired-toggle dired-details company-go cask browse-kill-ring ace-jump-mode))))
+    (haskell-emacs haskell-mode ddskk zop-to-char web-mode use-package undohist undo-tree tide solarized-theme smartparens rust-mode recentf-ext quickrun popwin point-undo open-junk-file ng2-mode multiple-cursors magit js2-mode jedi-core init-loader idle-highlight-mode htmlize howm helm-ls-git helm-ghq helm-ag git-gutter-fringe+ flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell ensime elscreen elpy drag-stuff dockerfile-mode disable-mouse dired-toggle dired-details company-go cask browse-kill-ring ace-jump-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -212,4 +212,10 @@
 (global-set-key "\C-x\C-j" 'skk-mode)
 
 (setq skk-dcomp-activate t)
+
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
+(load-theme 'solarized t)
+
+(set-face-attribute 'default nil :family "Ritcty" :height 180)
 
