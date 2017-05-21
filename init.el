@@ -184,7 +184,7 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 100)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -214,10 +214,12 @@
 (setq skk-dcomp-activate t)
 
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
+jj(add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
 (load-theme 'solarized t)
 
 (set-face-attribute 'default nil :family "Ritcty" :height 140)
 
+j
 ;; Japanese font
 (set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAExGothic"))
+>
