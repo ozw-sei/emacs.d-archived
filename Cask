@@ -55,3 +55,4 @@
 (depends-on "disable-mouse")
 (depends-on "howm")
 (depends-on "ddskk")
+(depends-on "point-undo")

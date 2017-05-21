@@ -213,13 +213,17 @@
 
 (setq skk-dcomp-activate t)
 
-
-jj(add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
 (load-theme 'solarized t)
 
 (set-face-attribute 'default nil :family "Ritcty" :height 140)
 
-j
 ;; Japanese font
 (set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAExGothic"))
->
+
+(require 'point-undo)
+(global-set-key (kbd "C-<") 'point-undo)
+(global-set-key (kbd "C->") 'point-redo)
+
+
+
