@@ -70,8 +70,8 @@
 
 (global-set-key (kbd "C-t") 'other-window)
 
-(global-set-key (kbd "C-M-i") 'switch-to-next-buffer)
-(global-set-key (kbd "C-M-o") 'switch-to-prev-buffer)
+(global-set-key (kbd "C-M-n") 'switch-to-next-buffer)
+(global-set-key (kbd "C-M-p") 'switch-to-prev-buffer)
 
 
 (global-set-key [f12] 'eval-buffer)

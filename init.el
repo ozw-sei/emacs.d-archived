@@ -22,10 +22,6 @@
 (with-eval-after-load 'flycheck
   (flycheck-pos-tip-mode))
 
-;; elscreen
-;; プレフィクスキーはC-z
-(setq elscreen-prefix-key (kbd "C-q"))
-(elscreen-start)
 ;;; タブの先頭に[X]を表示しない
 (setq elscreen-tab-display-kill-screen nil)
 ;;; header-lineの先頭に[<->]を表示しない
@@ -192,7 +188,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (haskell-emacs haskell-mode ddskk zop-to-char web-mode use-package undohist undo-tree tide solarized-theme smartparens rust-mode recentf-ext quickrun popwin point-undo open-junk-file ng2-mode multiple-cursors magit js2-mode jedi-core init-loader idle-highlight-mode htmlize howm helm-ls-git helm-ghq helm-ag git-gutter-fringe+ flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell ensime elscreen elpy drag-stuff dockerfile-mode disable-mouse dired-toggle dired-details company-go cask browse-kill-ring ace-jump-mode))))
+    (py-autopep8 esup noflet haskell-emacs haskell-mode ddskk zop-to-char web-mode use-package undohist undo-tree tide solarized-theme smartparens rust-mode recentf-ext quickrun popwin point-undo open-junk-file ng2-mode multiple-cursors magit js2-mode jedi-core init-loader idle-highlight-mode htmlize howm helm-ls-git helm-ghq helm-ag git-gutter-fringe+ flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell ensime elscreen elpy drag-stuff dockerfile-mode disable-mouse dired-toggle dired-details company-go cask browse-kill-ring ace-jump-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -216,14 +212,25 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
 (load-theme 'solarized t)
 
-(set-face-attribute 'default nil :family "Ritcty" :height 140)
+(defun reload-font ()
+  (interactive)
+  ;;GNU/Linux
+  (when (and (eq system-type 'gnu/linux) window-system)
+    (set-face-attribute 'default nil :family "Ritcty" :height 140)
+    (set-fontset-font (frame-parameter nil 'font)
+                      'japanese-jisx0208
+                      (font-spec :family "IPAGothic"))
+    (add-to-list 'face-font-rescale-alist
+                 '("Noto Sans Mono CJK JP" . 1.0))  
+    )
+  )
 
-;; Japanese font
-(set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAExGothic"))
+(reload-font)
 
 (require 'point-undo)
 (global-set-key (kbd "C-<") 'point-undo)
 (global-set-key (kbd "C->") 'point-redo)
 
-
-
+(require 'py-autopep8)
+;; 保存時にバッファ全体を自動整形する
+(add-hook 'before-save-hook 'py-autopep8-before-save)
