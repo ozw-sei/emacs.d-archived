@@ -3,6 +3,8 @@
 (source org)
 
 (depends-on "init-loader")
+(depends-on "use-package")
+(depends-on "smex")
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "jedi-core")
@@ -56,3 +58,8 @@
 (depends-on "howm")
 (depends-on "ddskk")
 (depends-on "point-undo")
+(depends-on "ido-ubiquitous")
+(depends-on "ido-yes-or-no")
+(depends-on "ido-vertical-mode")
+
+

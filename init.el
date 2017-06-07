@@ -231,6 +231,5 @@
 (global-set-key (kbd "C-<") 'point-undo)
 (global-set-key (kbd "C->") 'point-redo)
 
-(require 'py-autopep8)
-;; 保存時にバッファ全体を自動整形する
-(add-hook 'before-save-hook 'py-autopep8-before-save)
+(global-set-key (kbd "C-M-p") 'elpy-autopep8-fix-code)
+
