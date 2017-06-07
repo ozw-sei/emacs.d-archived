@@ -1,4 +1,4 @@
-;; パッケージのp設定
+;; package configuration
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -110,10 +110,6 @@
 
 ;; 自動改行しない
 (setq auto-fill-mode 0)
-
-;; 鬼軍曹
-(require 'drill-instructor)
-(setq drill-instructor-global t)
 
 (require 'typescript-mode)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
