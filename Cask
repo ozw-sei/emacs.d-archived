@@ -24,6 +24,7 @@
 (depends-on "tide")
 (depends-on "multiple-cursors")
 (depends-on "popwin")
+(depends-on "powerline")
 (depends-on "s")
 (depends-on "smartparens")
 (depends-on "use-package")
