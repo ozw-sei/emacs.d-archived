@@ -84,7 +84,6 @@
 (require 'disable-mouse)
 (global-disable-mouse-mode)
 
-
 ;; C-n, C-pで補完候補を次/前の候補を選択
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
