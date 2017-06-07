@@ -2,7 +2,7 @@
 (source melpa)
 (source org)
 
-(depends-on "skk")
+(depends-on "ddskk")
 (depends-on "init-loader")
 (depends-on "use-package")
 (depends-on "smex")
@@ -62,5 +62,4 @@
 (depends-on "ido-ubiquitous")
 (depends-on "ido-yes-or-no")
 (depends-on "ido-vertical-mode")
-
-
+(depends-on "projectile")

@@ -233,3 +233,4 @@
 
 (global-set-key (kbd "C-M-p") 'elpy-autopep8-fix-code)
 
+(projectile-mode)
