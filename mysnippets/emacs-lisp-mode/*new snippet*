@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: circle
+# key: circle
+# --
+machine:
+  node:
+    version: 6.4.0
+  python:
+    version: 3.6.0
+  environment:
+    DJANGO_SETTINGS_MODULE: config.settings.test
+dependencies:
+  pre:
+    - npm install
+test:
+  override:
+    - python manage.py test
+
