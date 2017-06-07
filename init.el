@@ -111,10 +111,6 @@
 ;; 自動改行しない
 (setq auto-fill-mode 0)
 
-;; 鬼軍曹
-(require 'drill-instructor)
-(setq drill-instructor-global t)
-
 (require 'typescript-mode)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
