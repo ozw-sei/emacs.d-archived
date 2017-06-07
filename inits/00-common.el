@@ -58,7 +58,7 @@
 (scroll-bar-mode -1)
 
 ;; C-x C-c で停止しない
-(global-set-key (kbd "C-x C-c") 'helm-M-x)
+(global-set-key (kbd "C-x C-c") 'smex)
 
 ;; I never use C-x C-c
 ;; exit で抜けられます

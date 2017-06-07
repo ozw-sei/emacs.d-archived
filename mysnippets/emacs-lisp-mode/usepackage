@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: usepackage
+# key: use
+# --
+(use-package $1
+  :bind
+  $2
+  :init
+  $3
+  :config
+  $4
+  )

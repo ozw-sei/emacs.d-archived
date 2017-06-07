@@ -12,5 +12,11 @@ recentf
 places
 history
 v/
+cache/
+!cache/.gitkeep
 #*
 .#*
+
+haskell-fun/
+
+ido.last
