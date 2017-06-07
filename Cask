@@ -55,3 +55,5 @@
 (depends-on "ng2-mode")
 (depends-on "disable-mouse")
 (depends-on "howm")
+(depends-on "ddskk")
+(depends-on "point-undo")
