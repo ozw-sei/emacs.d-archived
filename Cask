@@ -64,3 +64,6 @@
 (depends-on "ido-yes-or-no")
 (depends-on "ido-vertical-mode")
 (depends-on "projectile")
+(depends-on "elixir-mode")
+(depends-on "ruby-electric")
+(depends-on "ruby-block")
