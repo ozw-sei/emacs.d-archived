@@ -20,3 +20,5 @@ cache/
 haskell-fun/
 
 ido.last
+
+*.eld
