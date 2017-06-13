@@ -20,4 +20,5 @@ cache/
 haskell-fun/
 
 ido.last
-projectile-bookmarks.eld
+
+*.eld
