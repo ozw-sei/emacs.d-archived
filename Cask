@@ -67,3 +67,7 @@
 (depends-on "elixir-mode")
 (depends-on "ruby-electric")
 (depends-on "ruby-block")
+(depends-on "flymake-easy")
+(depends-on "flymake-elixir")
+(depends-on "alchemist")
+(depends-on "ruby-end")
