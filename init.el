@@ -107,20 +107,9 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-to-list 'company-backends 'company-jedi)
 
+
 ;; 自動改行しない
 (setq auto-fill-mode 0)
-
-(require 'typescript-mode)
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
-
-(require 'tide)
-(add-hook 'typescript-mode-hook
-          (lambda ()
-            (tide-setup)
-            (flycheck-mode t)
-            (setq flycheck-check-syntax-automatically '(save mode-enabled))
-            (eldoc-mode t)
-            (company-mode-on)))
 
 (exec-path-from-shell-initialize)
 
@@ -159,11 +148,6 @@
 (set-keyboard-coding-system 'utf-8)
 
 
-;; misc useful keybindings
-(global-set-key (kbd "s-<") #'beginning-of-buffer)
-(global-set-key (kbd "s->") #'end-of-buffer)
-
-
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
@@ -193,20 +177,6 @@
 
 (exec-path-from-shell-initialize)
 
-
-;; make what-whereでSKK modulesで表示されるディレクトリを指定
-(add-to-list 'load-path "/usr/share/emacs25.2/site-list/skk")
-;; M-x skk-tutorialでNo file found as 〜とエラーが出たときにskk-tut-fileを設定
-;; make what-whereでSKK tutorialsで表示されるディレクトリ上のSKK.tutを指定
-(setq skk-tut-file "/usr/share/skk/SKK.tut")
-(require 'skk)
-(global-set-key "\C-x\C-j" 'skk-mode)
-
-(setq skk-dcomp-activate t)
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
-(load-theme 'solarized t)
-
 (defun reload-font ()
   (interactive)
   ;;GNU/Linux
@@ -222,27 +192,9 @@
 
 (reload-font)
 
-(require 'point-undo)
-(global-set-key (kbd "C-<") 'point-undo)
-(global-set-key (kbd "C->") 'point-redo)
-
-(global-set-key (kbd "C-M-p") 'elpy-autopep8-fix-code)
-
-(projectile-mode)
-
-
-(setq omnisharp-server-executable-path "/usr/local/bin/omnisharp")
-
-
 (setq ido-enable-flex-matching t)
 
 (require 'powerline)
 (powerline-default-theme)
-
-
-(require 'flymake-elixir)
-(add-hook 'elixir-mode-hook 'flymake-elixir-load)
-
-(add-hook 'elixir-mode-hook 'ac-alchemist-setup)
 
 
